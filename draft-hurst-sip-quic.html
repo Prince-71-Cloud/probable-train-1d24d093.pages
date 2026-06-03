@@ -1,0 +1,35 @@
+   <!DOCTYPE html>
+     <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Broken Link Hijacking PoC - BBC</title>
+         <style>
+             body { font-family: sans-serif; padding: 50px; line-height: 1.6; color: #333; }
+             .container { max-width: 800px; margin: auto; border: 1px solid #ccc; padding: 20px; border-radius: 8px; background: #f9f9f9; }
+            h1 { color: #d9534f; }
+            code { background: #eee; padding: 2px 5px; border-radius: 4px; }
+            .success { color: #5cb85c; font-weight: bold; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Proof of Concept: Broken Link Hijacking</h1>
+            <p class="success">Status: Vulnerability Confirmed</p>
+            <hr>
+            <p>This page is hosted on <code>probable-train-1d24d093.pages.github.io</code>.</p>
+            <p>It is currently linked as the <strong>"Editor's Copy"</strong> in the official BBC repository:</p>
+            <p>➡️ <a href="https://github.com/bbc/draft-hurst-sip-quic">https://github.com/bbc/draft-hurst-sip-quic</a></p>
+            
+            <h3>Impact</h3>
+            <p>Since this link is found in a trusted BBC repository, an attacker could have hijacked this expired domain to:</p>
+            <ul>
+                <li>Serve malicious scripts (XSS).</li>
+                <li>Perform phishing attacks against developers or contributors.</li>
+                <li>Damage the reputation of the organization by hosting inappropriate content.</li>
+           </ul>
+            <hr>
+            <p><em>This PoC was created for security research purposes.</em></p>
+        </div>
+   </body>
+   </html>
